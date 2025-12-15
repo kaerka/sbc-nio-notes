@@ -1,0 +1,154 @@
+root@matrix-controller:~# dmesg | grep -Ei 'camera|isp|v4l2|csi|seninf|imx|ov'
+[    0.000000] Movable zone start for each node
+[    0.073547] thermal_sys: Registered thermal governor 'fair_share'
+[    0.073552] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.073559] thermal_sys: Registered thermal governor 'step_wise'
+[    0.073563] thermal_sys: Registered thermal governor 'user_space'
+[    0.073567] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.074418] cpuidle: using governor ladder
+[    0.074433] cpuidle: using governor menu
+[    0.119418] platform 1c300000.hdmi: Fixing up cyclic dependency with 1c112000.disp_dpi1
+[    0.131929] fbcon: Taking over console
+[    0.134191] SCSI subsystem initialized
+[    0.137555] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.217571] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    0.543772] scsi host0: ufshcd
+[    0.801359] scsi 0:0:0:49488: Well-known LUN    SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.803339] ufs_device_wlun 0:0:0:49488: Attached scsi generic sg0 type 30
+[    0.804951] scsi 0:0:0:49476: Well-known LUN    SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.806980] scsi 0:0:0:49476: Attached scsi generic sg1 type 30
+[    0.808535] scsi 0:0:0:49456: Well-known LUN    SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.810457] scsi 0:0:0:49456: Attached scsi generic sg2 type 30
+[    0.812526] scsi 0:0:0:0: Direct-Access     SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.814386] scsi 0:0:0:1: Direct-Access     SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.816087] scsi 0:0:0:2: Direct-Access     SAMSUNG  KLUEG8U1EA-B0C1  0400 PQ: 0 ANSI: 6
+[    0.818121] sd 0:0:0:0: Attached scsi generic sg3 type 0
+[    0.820059] sd 0:0:0:1: Attached scsi generic sg4 type 0
+[    0.821624] scsi 0:0:0:2: Attached scsi generic sg5 type 0
+[    0.828018] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    0.835385] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.838143] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    1.039103] Key type fscrypt-provisioning registered
+[    1.193172] mediatek-drm mediatek-drm.9.auto: Adding component match for /soc/ovl@1c000000
+[    1.200559] mediatek-drm mediatek-drm.9.auto: Adding component match for /soc/ovl@1c00a000
+[    1.209219] mediatek-drm mediatek-drm.9.auto: Adding component match for /soc/disp_dpi1@1c112000
+[    1.219962] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: type: 2, alias: 0 might not be part of ovl adaptor
+[    1.221374] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: Skipping unknown component /soc/merge0@1c014000
+[    1.223625] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: type: 2, alias: 5 might not be part of ovl adaptor
+[    1.225030] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: Skipping unknown component /soc/vpp-merge@1c110000
+[    1.244838] xhci-mtk 11200000.xhci: backwards compatible for rxfifo_depth, might be overwritten
+[    1.305339] hdmi-audio-codec hdmi-audio-codec.15.auto: ASoC: sink widget TX overwritten
+[    1.306371] hdmi-audio-codec hdmi-audio-codec.15.auto: ASoC: source widget RX overwritten
+[    1.720892] mediatek-dpi 1c112000.disp_dpi1: Found bridge node: /soc/hdmi@1c300000
+[    1.742338] xhci-mtk 11290000.xhci: backwards compatible for rxfifo_depth, might be overwritten
+[    1.831219] mediatek-disp-ovl 1c000000.ovl: Adding to iommu group 1
+[    1.833582] mediatek-disp-ovl 1c00a000.ovl: Adding to iommu group 1
+[    1.835309] mediatek-disp-rdma 1c002000.rdma: Adding to iommu group 1
+[    1.837005] mediatek-disp-rdma 1c00c000.rdma: Adding to iommu group 1
+[    1.839231] mediatek-drm mediatek-drm.9.auto: bound 1c000000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.840365] mediatek-drm mediatek-drm.9.auto: bound 1c002000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.841514] mediatek-drm mediatek-drm.9.auto: bound 1c003000.color (ops mtk_disp_color_component_ops)
+[    1.842698] mediatek-drm mediatek-drm.9.auto: bound 1c004000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.843870] mediatek-drm mediatek-drm.9.auto: bound 1c005000.aal (ops mtk_disp_aal_component_ops)
+[    1.844997] mediatek-drm mediatek-drm.9.auto: bound 1c006000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.846179] mediatek-drm mediatek-drm.9.auto: bound 1c00a000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.847419] mediatek-drm mediatek-drm.9.auto: bound 1c00c000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.848565] mediatek-drm mediatek-drm.9.auto: bound 1c00d000.color (ops mtk_disp_color_component_ops)
+[    1.849726] mediatek-drm mediatek-drm.9.auto: bound 1c00e000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.850898] mediatek-drm mediatek-drm.9.auto: bound 1c00f000.aal (ops mtk_disp_aal_component_ops)
+[    1.852024] mediatek-drm mediatek-drm.9.auto: bound 1c010000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.853185] mediatek-drm mediatek-drm.9.auto: bound 1c014000.merge0 (ops mtk_disp_merge_component_ops)
+[    1.855090] mediatek-drm mediatek-drm.9.auto: bound 1c112000.disp_dpi1 (ops mtk_dpi_component_ops)
+[    1.869369] mediatek-disp-rdma 1c00c000.rdma: Failed to add component: -517
+[    1.871231] mediatek-disp-ethdr 1c114000.hdr-engine: Adding to iommu group 1
+[    1.884509] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c104000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.885942] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c105000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.887359] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c106000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.888777] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c107000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.890198] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c108000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.891615] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c109000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.893031] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10a000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.894451] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10b000.rdma (ops mtk_mdp_rdma_component_ops)
+[    1.896470] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10c000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.898897] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10d000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.900392] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10e000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.901890] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c10f000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    1.903385] mediatek-disp-ovl-adaptor mediatek-disp-ovl-adaptor.12.auto: bound 1c114000.hdr-engine (ops mtk_ethdr_component_ops)
+[    1.905509] mediatek-drm mediatek-drm.9.auto: bound 1c000000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.906634] mediatek-drm mediatek-drm.9.auto: bound 1c002000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.907770] mediatek-drm mediatek-drm.9.auto: bound 1c003000.color (ops mtk_disp_color_component_ops)
+[    1.908928] mediatek-drm mediatek-drm.9.auto: bound 1c004000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.910088] mediatek-drm mediatek-drm.9.auto: bound 1c005000.aal (ops mtk_disp_aal_component_ops)
+[    1.911202] mediatek-drm mediatek-drm.9.auto: bound 1c006000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.912359] mediatek-drm mediatek-drm.9.auto: bound 1c00a000.ovl (ops mtk_disp_ovl_component_ops)
+[    1.913473] mediatek-drm mediatek-drm.9.auto: bound 1c00c000.rdma (ops mtk_disp_rdma_component_ops)
+[    1.914611] mediatek-drm mediatek-drm.9.auto: bound 1c00d000.color (ops mtk_disp_color_component_ops)
+[    1.915768] mediatek-drm mediatek-drm.9.auto: bound 1c00e000.ccorr (ops mtk_disp_ccorr_component_ops)
+[    1.916925] mediatek-drm mediatek-drm.9.auto: bound 1c00f000.aal (ops mtk_disp_aal_component_ops)
+[    1.918047] mediatek-drm mediatek-drm.9.auto: bound 1c010000.gamma (ops mtk_disp_gamma_component_ops)
+[    1.919205] mediatek-drm mediatek-drm.9.auto: bound 1c014000.merge0 (ops mtk_disp_merge_component_ops)
+[    1.921252] mediatek-drm mediatek-drm.9.auto: bound 1c112000.disp_dpi1 (ops mtk_dpi_component_ops)
+[    1.931408] mediatek-drm mediatek-drm.11.auto: bound mediatek-disp-ovl-adaptor.12.auto (ops mtk_disp_ovl_adaptor_comp_ops)
+[    1.932796] mediatek-drm mediatek-drm.11.auto: bound 1c110000.vpp-merge (ops mtk_disp_merge_component_ops)
+[    2.039794] mediatek-drm-hdmi 1c300000.hdmi: is_over_340M:0
+[    4.405113] raid6: using neon recovery algorithm
+[    6.163903] systemd[1]: Configuration file /run/systemd/system/netplan-ovs-cleanup.service is marked world-inaccessible. This has no effect as configuration data is accessible via APIs without restrictions. Proceeding anyway.
+[    7.867153] [MTK_V4L2] level=0 mtk_vcodec_dec_probe(),441: platform:mt8195
+[    7.867162] [MTK_V4L2] level=0 mtk_vcodec_dec_probe(),448: hw ipm: 2
+[    7.867165] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),55: mtk_vcodec_init_dec_pm at: 55
+[    7.867182] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 0, name: SOC_MT_CG_LARB1
+[    7.867191] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 1, name: LAT_MT_CG_VDEC
+[    7.867196] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 2, name: SOC_MT_CG_VDEC
+[    7.867202] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 3, name: CORE_MT_CG_LARB1
+[    7.867245] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 4, name: CORE_MT_CG_VDEC
+[    7.867254] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 5, name: CORE_MT_CG_CORE1_LARB1
+[    7.867258] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),90: init clock, id: 6, name: CORE_MT_CG_CORE1_VDEC
+[    7.867262] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),126: core_clks id: 0, name: SOC_MT_CG_LARB1
+[    7.867264] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),126: core_clks id: 2, name: SOC_MT_CG_VDEC
+[    7.867265] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),131: core_clks id: 3, name: CORE_MT_CG_LARB1
+[    7.867266] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),131: core_clks id: 4, name: CORE_MT_CG_VDEC
+[    7.867267] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),131: core_clks id: 5, name: CORE_MT_CG_CORE1_LARB1
+[    7.867268] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),131: core_clks id: 6, name: CORE_MT_CG_CORE1_VDEC
+[    7.867269] [MTK_V4L2] level=0 mtk_vcodec_init_dec_pm(),136: lat_clks id: 1, name: LAT_MT_CG_VDEC
+[    7.869535] [MTK_V4L2] level=0 mtk_vcodec_dec_probe(),623: decoder registered as /dev/video3
+[    7.877691] [MTK_V4L2] level=0 mtk_vdec_larb_probe(),740: mtk_vdec_larb_probe enable larb 24, hw_id 3
+[    7.877692] [MTK_V4L2] level=0 mtk_vcodec_enc_probe(),364: platform:mt8195
+[    7.877698] [MTK_V4L2] level=0 mtk_vcodec_enc_probe(),371: hw ipm: 2
+[    7.877811] [MTK_V4L2] level=0 mtk_vcodec_enc_probe(),469: after get port-def  port num 17 17
+[    7.882583] [MTK_V4L2] level=0 mtk_vdec_larb_probe(),740: mtk_vdec_larb_probe enable larb 23, hw_id 1
+[    7.883109] [MTK_V4L2] level=0 mtk_vcodec_enc_probe(),553: encoder registered as /dev/video4
+[    7.886266] [MTK_V4L2] level=0 mtk_vdec_larb_probe(),740: mtk_vdec_larb_probe enable larb 22, hw_id 2
+[    7.901949] [MTK_V4L2] level=0 mtk_venc_larb_probe(),675: mtk_venc_larb_probe enable larb 20, hw_id 1
+[    7.912291] [MTK_V4L2] level=0 mtk_vdec_larb_probe(),740: mtk_vdec_larb_probe enable larb 21, hw_id 0
+[    7.919875] [MTK_V4L2] level=0 mtk_venc_larb_probe(),675: mtk_venc_larb_probe enable larb 19, hw_id 0
+[    9.212318] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000c6b27600
+[    9.212364] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000c6b27600
+[    9.212380] [MTK_V4L2] level=0 fops_vcodec_open(),158: 1a020000.venc encoder [1]
+[    9.212475] [MTK_V4L2] level=0 fops_vcodec_release(),196: [1] encoder
+[    9.215323] [MTK_V4L2] level=0 mtk_vdec_s_ctrl(),3451: [1] V4L2_CID_MPEG_MTK_SEC_DECODE id 10035211 val 0
+[    9.215409] [MTK_V4L2] level=0 fops_vcodec_open(),180: 18000000.vdec decoder [1]
+[    9.215533] [MTK_V4L2] level=0 fops_vcodec_release(),232: [1] decoder
+[   32.697863] [MTK_V4L2] level=0 mtk_vdec_s_ctrl(),3451: [2] V4L2_CID_MPEG_MTK_SEC_DECODE id 10035211 val 0
+[   32.698218] [MTK_V4L2] level=0 fops_vcodec_open(),180: 18000000.vdec decoder [2]
+[   32.698281] [MTK_V4L2] level=0 fops_vcodec_release(),232: [2] decoder
+[   32.699077] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000cfaa4200
+[   32.699120] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000cfaa4200
+[   32.699137] [MTK_V4L2] level=0 fops_vcodec_open(),158: 1a020000.venc encoder [2]
+[   32.699182] [MTK_V4L2] level=0 fops_vcodec_release(),196: [2] encoder
+[   32.707975] [MTK_V4L2] level=0 mtk_vdec_s_ctrl(),3451: [3] V4L2_CID_MPEG_MTK_SEC_DECODE id 10035211 val 0
+[   32.708011] [MTK_V4L2] level=0 fops_vcodec_open(),180: 18000000.vdec decoder [3]
+[   32.708031] [MTK_V4L2] level=0 fops_vcodec_release(),232: [3] decoder
+[   32.708085] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000c7037d00
+[   32.708094] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000c7037d00
+[   32.708099] [MTK_V4L2] level=0 fops_vcodec_open(),158: 1a020000.venc encoder [3]
+[   32.708114] [MTK_V4L2] level=0 fops_vcodec_release(),196: [3] encoder
+[   34.087666] [MTK_V4L2] level=0 mtk_vdec_s_ctrl(),3451: [4] V4L2_CID_MPEG_MTK_SEC_DECODE id 10035211 val 0
+[   34.087703] [MTK_V4L2] level=0 fops_vcodec_open(),180: 18000000.vdec decoder [4]
+[   34.087826] [MTK_V4L2] level=0 fops_vcodec_release(),232: [4] decoder
+[   34.087876] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000cfa85f00
+[   34.087886] [MTK_V4L2] level=0 venc_if_get_param(),87: venc_if_get_param init drv_handle = 0xffff0000cfa85f00
+[   34.087890] [MTK_V4L2] level=0 fops_vcodec_open(),158: 1a020000.venc encoder [4]
+[   34.087995] [MTK_V4L2] level=0 fops_vcodec_release(),196: [4] encoder
+root@matrix-controller:~# media-ctl -p
+Failed to enumerate /dev/media0 (-2)
+root@matrix-controller:~#
