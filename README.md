@@ -42,6 +42,7 @@ The storage limit (UFS only, no M.2 NVMe) is still the main hardware drawback.
 1. [Hardware quirks](docs/hardware-quirks.md) — serial, USB host, Wi‑Fi scan, APU, audio, CSI
 2. [Boot, UFS, FIT](docs/boot-and-storage.md) — named partitions, download mode, fitImage
 3. [OS notes](docs/os-notes.md) — Armbian vs Ubuntu/Rity vs custom Yocto
+4. [Related work](docs/related-work.md) — lessons from [zlorenzini/radxa-nio-12l](https://github.com/zlorenzini/radxa-nio-12l) (attributed, not copied)
 
 Raw early CSI/V4L dump: [nio-v4l-csi-ubuntu-mtk.txt](nio-v4l-csi-ubuntu-mtk.txt)
 
